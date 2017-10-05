@@ -1,17 +1,24 @@
 buildscript { 
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
   repositories {
-    jcenter()
+    mavenCentral()
   }
   dependencies { 
-   classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE'
+   classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE'
   }
 }
-apply plugin: 'spring-boot'
-repositories { jcenter()
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+	mavenCentral()
 }
+
 dependencies {
   compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-data-mongodb"
-  
+  compile "org.springframework.boot:spring-boot-starter-data-mongodb"
   compile "org.springframework.boot:spring-boot-starter-web"
 }

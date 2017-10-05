@@ -19,15 +19,11 @@ import com.mongodb.MongoClientOptions;
 @ComponentScan
 public class MissionBoot {
 
-	   public static void main(String[] args) {
-	        SpringApplication.run(MissionBoot.class);
-	    }
-	
-	   
-	   @Autowired
-		private Environment env;
+    public static void main(String[] args) {
+	SpringApplication.run(MissionBoot.class);
+    }
 
+    @Autowired
+    private Environment env;
 
-	   
-	   
 }
